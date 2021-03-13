@@ -1,17 +1,18 @@
 import React from 'react';
-import './shopping-cart-table.css';
-
+import './ShoppingCartTable.css';
 const ShoppingCartTable = () => {
   return (
     <div className="shopping-cart-table">
       <h2>Your Order</h2>
       <table className="table">
         <thead>
-          <th>#</th>
-          <th>Item</th>
-          <th>Count</th>
-          <th>Price</th>
-          <th>Action</th>
+          <tr>
+            <th>#</th>
+            <th>Item</th>
+            <th>Count</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
         </thead>
 
         <tbody>
@@ -34,12 +35,10 @@ const ShoppingCartTable = () => {
           </tr>
         </tbody>
       </table>
-
       <div className="total">
         Total: $201
       </div>
     </div>
   );
 };
-
 export default ShoppingCartTable;
