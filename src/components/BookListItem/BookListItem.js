@@ -1,6 +1,6 @@
 import React from "react";
 import "./BookListItem.css";
-const BookListItem = ({book}) => {
+const BookListItem = ({book, onAddToCart}) => {
 	const {title, author, price, coverImage} = book;
 	return (
 		<div className="book-list-item">
@@ -8,10 +8,12 @@ const BookListItem = ({book}) => {
         		<img src={coverImage} alt="cover" />
       		</div>
       		<div className="book-details">
-        		<span href="#" className="book-title">{title}</span>
+        		<span className="book-title">{title}</span>
         		<div className="book-author">{author}</div>
         		<div className="book-price">${price}</div>
-        		<button className="btn btn-info add-to-cart">Add to cart</button>
+        		<button
+			className="btn btn-info add-to-cart"
+			onClick = {onAddToCart}>Add to cart</button>
       		</div>
    		</div>
 	);
